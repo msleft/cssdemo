@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="all" />
+<meta name="author" content="msleft" />
+<meta name="Copyright" content="" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>loading 箭头效果</title>
+<link rel="Shortcut Icon" href="images/en/favicon.ico" type="image/x-icon" />
+<link rel="Bookmark" href="/favicon.ico" type="image/x-icon" />
+<link rel=alternate href="/en/html/print" hreflang=en type=text/html media=print title="English HTML (for printing)">
+<style>
+/**
+ * Loading spinner */
+/* Centering */
+html, body {
+	height: 100%;
+	}
+body {
+	display: -webkit-box;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+	}
+/* Retards */
+body {
+	text-align: center;
+	}
+body::before {
+	content: '';
+	display: inline-block;
+	height: 100%; 
+	vertical-align: middle;
+	}
+.spinner {
+	display: inline-block !important;
+	vertical-align: middle;
+	}
+/* Spinner */
+html {
+	background: hsl(200, 50%, 90%);
+	text-align: center;
+	}
+.spinner {
+	display: block;
+	width: 35px;
+	height: 35px;
+	margin: 80px 150px;
+	position: relative;
+	border: 2px solid rgba(0,0,0,0.5);
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+	border-radius: 100%;
+	-webkit-animation: spin 1s infinite linear;
+ }
+.spinner:after {
+	content: '';
+	display: block;
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: -6px;
+	left: 3px;
+	border: 6px solid transparent;
+	border-bottom-color: rgba(0,0,0,0.5);
+	-webkit-transform: rotate(45deg);
+}
+.spinner:before {
+	content: '';
+	display: block;
+	width: 0;
+	height: 0;
+	position: absolute;
+	bottom: -6px;
+	right: 3px;
+	border: 6px solid transparent;
+	border-top-color: rgba(0,0,0,0.5);
+	-webkit-transform: rotate(45deg);
+}
+@-webkit-keyframes spin {
+	to { -webkit-transform: rotate(360deg); }
+}​
+</style>
+</head>
+<body>
+
+
+
+<span class="spinner"></span>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
